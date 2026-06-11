@@ -52,6 +52,9 @@
       if (v) { node.setAttribute("href", v); if (isExternal(v)) { node.setAttribute("target", "_blank"); node.setAttribute("rel", "noopener noreferrer"); } }
     });
 
+    // Discord "coming soon" badges (links stay clickable)
+    if (SITE.discordComingSoon) document.documentElement.classList.add("discord-soon");
+
     var titleLine = $(".hero__title-line");
     if (titleLine) titleLine.setAttribute("data-ghost", titleLine.textContent);
 

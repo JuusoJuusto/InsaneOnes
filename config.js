@@ -26,6 +26,7 @@ window.SITE = {
 
   discordUrl:  "https://discord.gg/jt53SpqaA7", // ← YOUR DISCORD INVITE LINK
   discordLabel:"discord.gg/jt53SpqaA7",          // What the link says on screen
+  discordComingSoon: true,                       // show a "Coming soon" badge on Discord (the link still works). Set false after launch.
 
   /* Live status is pinged from the free mcstatus.io API (with mcsrvstat.us as a
      backup). Set this to your server address (usually the same as `ip`).
