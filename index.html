@@ -332,14 +332,22 @@
   <script defer src="assets/lenis.min.js"></script>
   <script defer src="main.js"></script>
 
-  <!-- Vercel Web Analytics — the @vercel/analytics package's inject().
-       The package (v1.6.1) is vendored at assets/vercel-analytics.js and loaded
-       same-origin (no third-party CDN), the exact equivalent of
-       `import { inject } from "@vercel/analytics"; inject();`.
-       Enable Web Analytics in your Vercel project's Analytics tab; data is only
-       collected on the deployed Vercel site, not on localhost. -->
+  <!-- Vercel Web Analytics — @vercel/analytics inject().
+       The package (v1.6.1) is installed locally at assets/vercel-analytics.js and
+       mapped to its package name below, so the code reads exactly like the docs
+       ( import { inject } from "@vercel/analytics" ; inject() ) while loading
+       same-origin — no CDN, no build step.
+       NOTE: data only appears after you ENABLE Web Analytics in your Vercel
+       project's Analytics tab and the live site gets a visit. -->
+  <script type="importmap">
+  {
+    "imports": {
+      "@vercel/analytics": "/assets/vercel-analytics.js"
+    }
+  }
+  </script>
   <script type="module">
-    import { inject } from "/assets/vercel-analytics.js";
+    import { inject } from "@vercel/analytics";
     inject();
   </script>
 </body>
