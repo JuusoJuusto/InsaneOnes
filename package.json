@@ -1,0 +1,17 @@
+{
+  "name": "insane-ones",
+  "version": "1.0.0",
+  "description": "InsaneOnes - Survival Anarchy SMP",
+  "private": true,
+  "scripts": {
+    "dev": "npx serve .",
+    "build": "echo 'Static site - no build needed'",
+    "lint": "echo 'No linter configured'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@vercel/analytics": "^2.0.1"
+  }
+}
