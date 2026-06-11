@@ -72,6 +72,7 @@ window.SITE = {
     { title: "The world never resets",  body: "One permanent world, no wipes, no rollbacks. Every base you raid and every scar you leave stays forever." },
     { title: "No admin will save you",  body: "Staff don't police the world, return your items, or undo your death. You are completely on your own." },
     { title: "A real player economy",   body: "Earn coins, buy and sell at the shop, run your own store, or get rich off everyone else's mistakes." },
+    { title: "Proximity voice chat",    body: "Simple Voice Chat is built in. Hear footsteps behind you, cut deals, and catch last words in real-time proximity voice. Grab the mod and talk." },
     { title: "Any version welcome",     body: "The world runs on 26.1.2, but you don't have to. Connect from almost any Minecraft version you've got." },
     { title: "Not pay-to-win, not hardcore", body: "You respawn when you die, and you can't buy your way to the top. The grind is real and so are the losses." },
   ],
@@ -105,7 +106,7 @@ window.SITE = {
       { title: "Paste the address", body: "Drop in the server IP below. The server name is up to you." },
       { title: "Join Server", body: "Hit Join and load in. From here, you're on your own." },
     ],
-    note: "Java Edition with a premium (paid) Minecraft account is required. Cracked clients cannot connect.",
+    note: "Java Edition with a premium (paid) Minecraft account is required. Cracked clients cannot connect. For proximity voice, also install the Simple Voice Chat mod (Fabric).",
   },
 
   /* ── 8. GALLERY ─────────────────────────────────────────────────────────── */
@@ -134,6 +135,7 @@ window.SITE = {
       { q: "Is it hardcore?",                a: "No. You respawn when you die, you just drop everything you were carrying. Death is a setback, not the end of your run." },
       { q: "Is it really no rules?",         a: "Yes. Griefing, raiding, scamming, alliances and betrayal are all fair game. The only limits are Minecraft's own mechanics." },
       { q: "Is there a shop?",               a: "Yes. There's a server shop and a full player economy. Earn coins, buy and sell, open your own shop, or get rich off other people's mistakes." },
+      { q: "Is there voice chat?",          a: "Yes. The server runs Simple Voice Chat, so you get real-time proximity voice in-game. Install the Simple Voice Chat mod (Fabric) to hear and talk to players near you. It's optional, but on an anarchy server you'll want to hear who's sneaking up." },
       { q: "What version can I join on?",    a: "The world runs on 26.1.2, but you can connect from almost any Minecraft version. Use whatever you've got installed." },
       { q: "Do I need a premium account?",   a: "Yes. InsaneOnes is Java Edition and requires an official, paid Minecraft account. Cracked clients can't join." },
       { q: "Is it pay-to-win?",              a: "No. The shop runs on in-game coins you earn by playing. You can't buy power with real money." },
