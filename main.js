@@ -457,6 +457,29 @@
     timer = setInterval(tick, 1000);
   }
 
+  /* ---- Discord "coming soon" popup (intercept Discord clicks until launch) - */
+  function initDiscordSoon() {
+    if (!SITE.discordComingSoon) return;
+    document.documentElement.classList.add("discord-soon");
+    var dlg = $("#discordModal");
+    function close() { if (!dlg) return; if (typeof dlg.close === "function") dlg.close(); else dlg.removeAttribute("open"); }
+    function open() { if (!dlg) return; if (typeof dlg.showModal === "function") dlg.showModal(); else dlg.setAttribute("open", ""); }
+    if (dlg) {
+      ["#discordModalClose", "#discordModalGotit", "#discordModalCopy"].forEach(function (sel) {
+        var b = $(sel); if (b) b.addEventListener("click", close);
+      });
+      dlg.addEventListener("click", function (e) { if (e.target === dlg) close(); });
+    }
+    // Any Discord link/button opens the popup instead of navigating.
+    document.addEventListener("click", function (e) {
+      var el = e.target.closest("a, button"); if (!el) return;
+      var href = el.getAttribute("href");
+      if (!el.matches('[data-href="discordUrl"]') && !(href && href === SITE.discordUrl)) return;
+      e.preventDefault();
+      open();
+    }, true);
+  }
+
   /* ---- boot --------------------------------------------------------------- */
   function boot() {
     if ("scrollRestoration" in history) history.scrollRestoration = "manual";
@@ -471,6 +494,7 @@
     initAnchors();
     initStatus();
     initLightbox();
+    initDiscordSoon();
     initReveals();
     initMagnetic();
     initGlow();

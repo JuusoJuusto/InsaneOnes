@@ -56,7 +56,7 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
           </span>
         </button>
-        <a class="btn btn--ghost nav__discord" data-href="discordUrl" href="#">Discord</a>
+        <a class="btn btn--ghost nav__discord" data-href="discordUrl" href="#">Discord<span class="soon-tag">soon</span></a>
       </div>
 
       <button class="nav__toggle" id="navToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
@@ -285,6 +285,7 @@
     <section class="cta section" id="discord">
       <div class="cta__glow" aria-hidden="true"></div>
       <div class="wrap cta__inner">
+        <span class="soon-badge">Coming soon</span>
         <h2 class="cta__heading" data-bind="discordCta.heading">The war room is on Discord</h2>
         <p class="cta__body" data-bind="discordCta.body"></p>
         <a class="btn btn--blood btn--lg" data-href="discordUrl" href="#">
@@ -326,6 +327,20 @@
       <img id="lightboxImg" alt="" />
       <figcaption id="lightboxCap"></figcaption>
     </figure>
+  </dialog>
+
+  <!-- "Coming soon" popup shown when a Discord button is clicked -->
+  <dialog class="modal" id="discordModal" aria-labelledby="discordModalTitle">
+    <div class="modal__card">
+      <button class="modal__x" id="discordModalClose" type="button" aria-label="Close">&times;</button>
+      <span class="modal__badge">Coming soon</span>
+      <h3 class="modal__title" id="discordModalTitle">The Discord opens with the server</h3>
+      <p class="modal__text">It's not live just yet. Copy the IP, get ready, and you'll be first in when the gates open.</p>
+      <div class="modal__actions">
+        <button class="btn btn--blood" data-copy="ip" id="discordModalCopy" type="button"><span>Copy IP &amp; Play</span></button>
+        <button class="btn btn--ghost" id="discordModalGotit" type="button">Got it</button>
+      </div>
+    </div>
   </dialog>
 
   <script src="config.js"></script>
