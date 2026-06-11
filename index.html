@@ -333,13 +333,13 @@
   <script defer src="main.js"></script>
 
   <!-- Vercel Web Analytics — the @vercel/analytics package's inject().
-       Imported as a module from the package (via CDN) because this is a no-build
-       static site, so there's no bundler to `npm i` into. This is the exact
-       equivalent of `import { inject } from "@vercel/analytics"; inject();`.
+       The package (v1.6.1) is vendored at assets/vercel-analytics.js and loaded
+       same-origin (no third-party CDN), the exact equivalent of
+       `import { inject } from "@vercel/analytics"; inject();`.
        Enable Web Analytics in your Vercel project's Analytics tab; data is only
        collected on the deployed Vercel site, not on localhost. -->
   <script type="module">
-    import { inject } from "https://esm.sh/@vercel/analytics@1";
+    import { inject } from "/assets/vercel-analytics.js";
     inject();
   </script>
 </body>
