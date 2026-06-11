@@ -325,7 +325,7 @@
       if (scPlayers && d.count != null) countUp(scPlayers, d.count);
       if (scMax && d.max != null) scMax.textContent = " / " + d.max;
       if (scVer) scVer.textContent = d.version || SITE.version || "—";
-      if (scMotd) scMotd.textContent = d.motd ? d.motd : "An unstable SMP. Connect on any version.";
+      if (scMotd) scMotd.textContent = d.motd ? d.motd : "Survival anarchy SMP. Connect on any version.";
       if (scIcon && scIconWrap) { if (d.icon) { scIcon.src = d.icon; scIconWrap.classList.remove("is-empty"); } else scIconWrap.classList.add("is-empty"); }
     }).catch(function () {
       if (dot) dot.setAttribute("data-state", "unknown");

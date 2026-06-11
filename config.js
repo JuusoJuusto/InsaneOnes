@@ -14,8 +14,8 @@ window.SITE = {
   /* ── 1. THE ESSENTIALS — edit these first ───────────────────────────────── */
 
   name:        "InsaneOnes",                 // Server name (shown everywhere)
-  kind:        "Unstable SMP",               // What kind of server it is
-  tagline:     "Chaos is the only constant.",
+  kind:        "Survival Anarchy SMP",       // What kind of server it is
+  tagline:     "There are no rules. Only survival.",
 
   ip:          "mc.insaneones.xyz",          // ← YOUR SERVER IP
   edition:     "Java Edition",               // e.g. "Java Edition"
@@ -36,9 +36,9 @@ window.SITE = {
   /* ── 2. HERO (the first thing visitors see) ─────────────────────────────── */
 
   hero: {
-    kicker:  "Unstable SMP",                  // small label above the title
+    kicker:  "Survival Anarchy SMP",          // small label above the title
     // Lead line under the IP. Keep it short.
-    intro:   "A chaotic survival SMP where the world never resets, the economy is yours to run, and you can join from any version. Build something. Watch someone take it.",
+    intro:   "A survival anarchy SMP where the world never resets, the economy is yours to run, and you can join from any version. Build something. Watch someone take it.",
     primaryCta: "Copy IP & Play",
     ghostCta:   "Join the Discord",
   },
@@ -54,24 +54,24 @@ window.SITE = {
   /* ── 4. WHAT IT IS (the statement section) ──────────────────────────────── */
 
   about: {
-    heading: "Stability not included.",
+    heading: "This is not a server. It's a sentence.",
     // Each string is its own paragraph. Add or remove lines freely.
     body: [
-      "InsaneOnes is an unstable SMP. It's survival, but the kind where the ground keeps shifting under you: alliances collapse, the market crashes, someone you trusted empties your chest while you sleep.",
-      "The world never resets, so everything you do leaves a mark. There's a real player economy with a shop and a market, and there's no map wipe coming to bail you out of a bad decision.",
-      "It is not hardcore, you respawn when you die. You just respawn with nothing, while everything you were carrying becomes someone else's problem to spend.",
+      "InsaneOnes is a survival anarchy SMP. No rules, no claims, and no staff standing between you and the next player who wants what you have. You make it on your own terms, or you don't make it.",
+      "The world never resets, so everything you do leaves a mark. There's a real player economy with a shop and a market, and no map wipe is coming to bail you out of a bad trade or a worse alliance.",
+      "It is not hardcore, you respawn when you die. You just respawn with nothing, while everything you were carrying becomes someone else's to spend.",
     ],
     pullQuote: "Build something. Watch someone take it.",
   },
 
-  /* ── 5. HOW THE CHAOS WORKS (what makes the server what it is) ───────────── */
+  /* ── 5. THE LAWS OF THE VOID (what makes the server what it is) ──────────── */
   /* These are your headline features. Add or remove items freely. */
 
   laws: [
-    { title: "Anything can happen",     body: "Shifting events, chaos, and the occasional thing that probably shouldn't work. Stability is not a feature here, it's the joke." },
-    { title: "The world never resets",  body: "One permanent world. Every build, every scar, and every betrayal stays exactly where you left it." },
-    { title: "Raid, betray, survive",   body: "PvP, griefing, and backstabbing are all on the table. Trust people if you want. Just don't be surprised." },
-    { title: "Player-run economy",      body: "Earn currency, buy and sell at the shop, run your own store, or get rich off everyone else's bad luck." },
+    { title: "There are no rules",      body: "Grief, raid, betray, build empires, burn them down. Nothing here is against the rules, because there are none." },
+    { title: "The world never resets",  body: "One permanent world, no wipes, no rollbacks. Every base you raid and every scar you leave stays forever." },
+    { title: "No admin will save you",  body: "Staff don't police the world, return your items, or undo your death. You are completely on your own." },
+    { title: "A real player economy",   body: "Earn coins, buy and sell at the shop, run your own store, or get rich off everyone else's mistakes." },
     { title: "Any version welcome",     body: "The world runs on 26.1.2, but you don't have to. Connect from almost any Minecraft version you've got." },
     { title: "Not pay-to-win, not hardcore", body: "You respawn when you die, and you can't buy your way to the top. The grind is real and so are the losses." },
   ],
@@ -132,7 +132,7 @@ window.SITE = {
     heading: "Before you log on",
     items: [
       { q: "Is it hardcore?",                a: "No. You respawn when you die, you just drop everything you were carrying. Death is a setback, not the end of your run." },
-      { q: "Is it really that chaotic?",     a: "Yes. Griefing, raiding, scamming, alliances and betrayal are all fair game. The world is unstable on purpose." },
+      { q: "Is it really no rules?",         a: "Yes. Griefing, raiding, scamming, alliances and betrayal are all fair game. The only limits are Minecraft's own mechanics." },
       { q: "Is there a shop?",               a: "Yes. There's a server shop and a full player economy. Earn coins, buy and sell, open your own shop, or get rich off other people's mistakes." },
       { q: "What version can I join on?",    a: "The world runs on 26.1.2, but you can connect from almost any Minecraft version. Use whatever you've got installed." },
       { q: "Do I need a premium account?",   a: "Yes. InsaneOnes is Java Edition and requires an official, paid Minecraft account. Cracked clients can't join." },
@@ -157,7 +157,7 @@ window.SITE = {
     // "#join", "#gallery", "#faq". For an external link, use a full https URL.
     links: [
       { label: "Live status", url: "#status" },
-      { label: "The chaos",   url: "#laws" },
+      { label: "The Laws",    url: "#laws" },
       { label: "Shop",        url: "#shop" },
       { label: "Join",        url: "#join" },
       { label: "Gallery",     url: "#gallery" },

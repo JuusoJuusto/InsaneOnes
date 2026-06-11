@@ -6,8 +6,8 @@ brand
 
 ## Users
 
-Minecraft players (Java Edition, premium accounts) hunting for a chaotic,
-unstable SMP. They arrive skeptical: they have seen dead servers, pay-to-win
+Minecraft players (Java Edition, premium accounts) hunting for a survival
+anarchy SMP. They arrive skeptical: they have seen dead servers, pay-to-win
 "anarchy" servers, and laggy clones. Their context is a browser tab open next to
 their Minecraft launcher. The job to be done in one visit: understand what
 InsaneOnes is, trust that it is alive and genuinely lawless, copy the IP, and
@@ -15,7 +15,7 @@ join. A large share also want to land in the Discord first.
 
 ## Product Purpose
 
-InsaneOnes is an unstable survival SMP: chaotic and lawless, no map resets, no
+InsaneOnes is a survival anarchy SMP: lawless, no map resets, no
 admin interference, a player-run economy with a shop, and cross-version play (the
 world runs on 26.1.2 but players join from almost any version). It is NOT
 hardcore (players respawn, dropping their inventory) and NOT pay-to-win. The

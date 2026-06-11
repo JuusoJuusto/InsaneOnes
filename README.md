@@ -1,6 +1,6 @@
 # InsaneOnes — server website
 
-A single-page site for the InsaneOnes unstable SMP Minecraft server.
+A single-page site for the InsaneOnes survival anarchy SMP Minecraft server.
 No build step, no framework. Just open the files or upload them to any host.
 
 ## How to edit (the important part)
@@ -17,8 +17,8 @@ version:     "26.1.2",                         // the version your world runs on
 discordUrl:  "https://discord.gg/insaneones", // your Discord invite
 ```
 
-The same file also holds the tagline, the "laws" (how the chaos works), the shop,
-the join steps, the FAQ, the gallery captions, and the footer. Each section has a
+The same file also holds the tagline, the "laws", the shop, the join steps, the
+FAQ, the gallery captions, and the footer. Each section has a
 comment explaining what it does. You don't need to touch any other file to update
 content.
 
