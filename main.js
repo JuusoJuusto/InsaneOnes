@@ -432,6 +432,32 @@
     if ("IntersectionObserver" in window) new IntersectionObserver(function (e) { (e[0].isIntersecting && !document.hidden) ? start() : stop(); }, { threshold: 0 }).observe(hero);
   }
 
+  /* ---- launch countdown --------------------------------------------------- */
+  function initCountdown() {
+    var section = $("#countdown"); if (!section) return;
+    var cfg = SITE.launch;
+    if (!cfg || cfg.enabled === false || !cfg.date) { section.remove(); return; }
+    var target = new Date(cfg.date).getTime();
+    if (isNaN(target)) { section.remove(); return; }
+
+    var labelEl = $("#cdLabel"); if (labelEl && cfg.label) labelEl.textContent = cfg.label;
+    var dateEl = $("#cdDate"); if (dateEl && cfg.dateText) dateEl.textContent = cfg.dateText;
+    var liveEl = $("#cdLive"); if (liveEl && cfg.liveText) liveEl.textContent = cfg.liveText;
+    var days = $("#cdDays"), hours = $("#cdHours"), mins = $("#cdMins"), secs = $("#cdSecs");
+    function pad(n) { return (n < 10 ? "0" : "") + n; }
+    var timer;
+    function tick() {
+      var diff = target - Date.now();
+      if (diff <= 0) { section.classList.add("is-live"); if (timer) clearInterval(timer); return; }
+      days.textContent = pad(Math.floor(diff / 86400000));
+      hours.textContent = pad(Math.floor((diff % 86400000) / 3600000));
+      mins.textContent = pad(Math.floor((diff % 3600000) / 60000));
+      secs.textContent = pad(Math.floor((diff % 60000) / 1000));
+    }
+    tick();
+    timer = setInterval(tick, 1000);
+  }
+
   /* ---- boot --------------------------------------------------------------- */
   function boot() {
     if ("scrollRestoration" in history) history.scrollRestoration = "manual";
@@ -439,6 +465,7 @@
     if (!location.hash) { window.scrollTo(0, 0); if (lenis) lenis.scrollTo(0, { immediate: true }); }
 
     hydrate();
+    initCountdown();
     initCopy();
     initNav();
     initScrollFx();

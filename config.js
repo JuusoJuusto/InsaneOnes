@@ -43,6 +43,19 @@ window.SITE = {
     ghostCta:   "Join the Discord",
   },
 
+  /* ── LAUNCH COUNTDOWN (big countdown at the top until the server opens) ──── */
+  /* Set enabled:false (or delete this block) once it has launched.            */
+
+  launch: {
+    enabled: true,
+    // When the server opens. ISO format, with your timezone offset at the end.
+    // Below = Friday 12 June 2026, 23:59, Finland time (UTC+3 in summer).
+    date:     "2026-06-12T23:59:00+03:00",
+    label:    "Server opens in",             // small label above the numbers
+    dateText: "Friday 12 June · 23:59",      // the human-readable opening time
+    liveText: "The gates are open. Get in.", // shown once the countdown hits zero
+  },
+
   /* ── 3. LIVE STATUS (the \"look at the server\" card) ─────────────────────── */
 
   status: {

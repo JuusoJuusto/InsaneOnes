@@ -76,6 +76,28 @@
 
   <main id="top">
 
+    <!-- ══ LAUNCH COUNTDOWN ════════════════════════════════════════════════ -->
+    <section class="countdown" id="countdown">
+      <div class="countdown__glow" aria-hidden="true"></div>
+      <div class="wrap countdown__inner">
+        <p class="countdown__label" id="cdLabel">Server opens in</p>
+        <div class="countdown__clock" id="countdownClock" role="timer" aria-label="Time until the server opens">
+          <div class="countdown__unit"><span class="countdown__num" id="cdDays">--</span><span class="countdown__lbl">Days</span></div>
+          <span class="countdown__sep" aria-hidden="true">:</span>
+          <div class="countdown__unit"><span class="countdown__num" id="cdHours">--</span><span class="countdown__lbl">Hrs</span></div>
+          <span class="countdown__sep" aria-hidden="true">:</span>
+          <div class="countdown__unit"><span class="countdown__num" id="cdMins">--</span><span class="countdown__lbl">Min</span></div>
+          <span class="countdown__sep" aria-hidden="true">:</span>
+          <div class="countdown__unit"><span class="countdown__num" id="cdSecs">--</span><span class="countdown__lbl">Sec</span></div>
+        </div>
+        <p class="countdown__date" id="cdDate">Friday 12 June · 23:59</p>
+        <div class="countdown__live">
+          <p class="countdown__livetext" id="cdLive">The gates are open.</p>
+          <button class="btn btn--blood" data-copy="ip" type="button"><span>Copy IP &amp; Play</span></button>
+        </div>
+      </div>
+    </section>
+
     <!-- ══ HERO ════════════════════════════════════════════════════════════ -->
     <section class="hero" id="play">
       <canvas class="hero__ash" id="ashCanvas" aria-hidden="true"></canvas>
