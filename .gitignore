@@ -1,0 +1,12 @@
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+desktop.ini
+*.log
+
+# Vercel
+.vercel
+
+# Local screenshots / scratch
+preview-*.png
+*.tmp

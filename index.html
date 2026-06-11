@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>InsaneOnes - Survival Anarchy SMP</title>
+  <meta name="description" content="InsaneOnes is an unstable survival SMP. No resets, a player-run economy and shop, join from any version. IP: mc.insaneones.xyz." />
+  <meta name="theme-color" content="#0a0b0e" />
+
+  <!-- Social share preview. Drop an image at assets/og.png to enable rich previews. -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="InsaneOnes - Survival Anarchy SMP" />
+  <meta property="og:description" content="Chaos is the only constant. No resets, a player economy, any version. IP: mc.insaneones.xyz" />
+  <meta property="og:image" content="assets/og.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+
+  <!-- Reveal-on-scroll is only armed when JS is running, so the page is never blank without it. -->
+  <script>document.documentElement.classList.add('js');</script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#play">Skip to content</a>
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- ══ NAV ══════════════════════════════════════════════════════════════ -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a class="brand" href="#top" aria-label="InsaneOnes home">
+        <span class="brand__mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" fill="none"><rect x="3.5" y="3.5" width="25" height="25" rx="2" stroke="currentColor" stroke-width="2.4"/><path d="M17.5 5 L10.5 17 L15.5 17 L13 27 L22 14.5 L16.5 14.5 Z" fill="var(--blood)"/></svg>
+        </span>
+        <span class="brand__name" data-bind="name">InsaneOnes</span>
+      </a>
+
+      <nav class="nav__links" aria-label="Primary">
+        <a href="#status">Live</a>
+        <a href="#laws">The Chaos</a>
+        <a href="#shop">Shop</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+
+      <div class="nav__actions">
+        <button class="ip-chip" data-copy="ip" type="button" aria-label="Copy server IP address">
+          <span class="ip-chip__label" data-bind="ip">mc.insaneones.xyz</span>
+          <span class="ip-chip__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+          </span>
+        </button>
+        <a class="btn btn--ghost nav__discord" data-href="discordUrl" href="#">Discord</a>
+      </div>
+
+      <button class="nav__toggle" id="navToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <nav class="mobile-nav" id="mobileNav" aria-label="Mobile">
+      <a href="#status">Live status</a>
+      <a href="#laws">The Chaos</a>
+      <a href="#shop">Shop</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#faq">FAQ</a>
+      <a class="btn btn--blood" data-href="discordUrl" href="#">Join the Discord</a>
+    </nav>
+  </header>
+
+  <main id="top">
+
+    <!-- ══ HERO ════════════════════════════════════════════════════════════ -->
+    <section class="hero" id="play">
+      <canvas class="hero__ash" id="ashCanvas" aria-hidden="true"></canvas>
+      <div class="hero__ridge" data-parallax="0.25" aria-hidden="true"></div>
+      <div class="hero__glow" aria-hidden="true"></div>
+      <div class="hero__grain" aria-hidden="true"></div>
+
+      <div class="hero__inner">
+        <p class="kicker hero-in" data-bind="hero.kicker">Unstable SMP</p>
+
+        <h1 class="hero__title hero-in" data-hero="title">
+          <span class="hero__title-line" data-bind="name">InsaneOnes</span>
+        </h1>
+
+        <p class="hero__tagline hero-in" data-bind="tagline">Chaos is the only constant.</p>
+        <p class="hero__intro hero-in" data-bind="hero.intro">A chaotic survival SMP. Build something. Watch someone take it.</p>
+
+        <div class="join-box hero-in">
+          <button class="join-box__ip" data-copy="ip" type="button" aria-label="Copy server IP address">
+            <span class="join-box__addr" data-bind="ip">mc.insaneones.xyz</span>
+            <span class="join-box__copy">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+              <span class="join-box__copy-text">Copy</span>
+            </span>
+          </button>
+
+          <div class="hero__cta">
+            <button class="btn btn--blood" data-copy="ip" data-cta="primary" type="button">
+              <span data-bind="hero.primaryCta">Copy IP &amp; Play</span>
+            </button>
+            <a class="btn btn--ghost" data-href="discordUrl" href="#">
+              <svg class="btn__discord" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.3 4.4A19.8 19.8 0 0 0 15.4 3l-.25.5a18.3 18.3 0 0 1 4.35 1.35 16.6 16.6 0 0 0-15-1A16.6 16.6 0 0 0 8.85 4.9L8.6 3a19.8 19.8 0 0 0-4.9 1.4C1 9.6 0 14.7.45 19.7a20 20 0 0 0 6 3l.8-1.3a13 13 0 0 1-2.05-1c.17-.13.34-.26.5-.4a14.3 14.3 0 0 0 12.6 0c.16.14.33.27.5.4a13 13 0 0 1-2.06 1l.8 1.3a20 20 0 0 0 6-3c.6-5.9-1-11-3.6-15.3ZM8.3 16.2c-1.18 0-2.15-1.1-2.15-2.43 0-1.34.95-2.43 2.15-2.43s2.17 1.1 2.15 2.43c0 1.34-.95 2.43-2.15 2.43Zm7.4 0c-1.18 0-2.15-1.1-2.15-2.43 0-1.34.95-2.43 2.15-2.43s2.17 1.1 2.15 2.43c0 1.34-.94 2.43-2.15 2.43Z"/></svg>
+              <span data-bind="hero.ghostCta">Join the Discord</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick live telemetry strip -->
+        <div class="telemetry hero-in" id="telemetry" aria-live="polite">
+          <span class="telemetry__status" id="statusChip">
+            <span class="telemetry__dot" id="statusDot" data-state="loading"></span>
+            <span id="statusText">Checking server…</span>
+          </span>
+          <span class="telemetry__sep" aria-hidden="true"></span>
+          <span class="telemetry__item"><span class="telemetry__num" id="playersOnline">—</span> <span class="telemetry__unit">online</span></span>
+          <span class="telemetry__sep" aria-hidden="true"></span>
+          <span class="telemetry__item"><span class="mono" data-bind="version">26.1.2</span> <span class="telemetry__badge" data-bind="versionNote">any version</span></span>
+        </div>
+      </div>
+
+      <a class="hero__scroll" href="#status" aria-label="Scroll to live status">
+        <span></span>
+      </a>
+    </section>
+
+    <!-- ══ LIVE STATUS ═════════════════════════════════════════════════════ -->
+    <section class="status section" id="status">
+      <div class="wrap">
+        <div class="section__head">
+          <p class="eyebrow"><span class="eyebrow__live" aria-hidden="true"></span> <span data-bind="status.kicker">Live status</span></p>
+          <h2 class="section__title reveal-wipe" data-bind="status.heading">Don't take our word for it.</h2>
+          <p class="section__lede reveal" data-bind="status.body"></p>
+        </div>
+
+        <!-- Minecraft-style server list entry, populated live -->
+        <div class="server-card reveal" id="serverCard" data-state="loading">
+          <div class="server-card__icon is-empty">
+            <img id="scIcon" alt="InsaneOnes server icon" width="80" height="80" />
+            <span class="server-card__icon-fallback" aria-hidden="true">
+              <svg viewBox="0 0 32 32" fill="none"><rect x="3.5" y="3.5" width="25" height="25" rx="2" stroke="currentColor" stroke-width="2.4"/><path d="M17.5 5 L10.5 17 L15.5 17 L13 27 L22 14.5 L16.5 14.5 Z" fill="var(--blood)"/></svg>
+            </span>
+          </div>
+
+          <div class="server-card__main">
+            <div class="server-card__head">
+              <span class="server-card__name" data-bind="name">InsaneOnes</span>
+              <span class="server-card__bars" id="scBars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
+            </div>
+            <p class="server-card__motd" id="scMotd">Pinging the server…</p>
+            <div class="server-card__foot">
+              <button class="server-card__addr mono" data-copy="ip" data-bind="ip" type="button" aria-label="Copy server IP">mc.insaneones.xyz</button>
+              <span class="server-card__state"><span class="server-card__dot" id="scDot" data-state="loading"></span> <span id="scState">Pinging…</span></span>
+            </div>
+          </div>
+
+          <div class="server-card__side">
+            <span class="server-card__players"><b id="scPlayers" data-count>—</b><span id="scPlayersMax"></span></span>
+            <span class="server-card__plabel">players online</span>
+            <span class="server-card__ver mono" id="scVer">—</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ ABOUT / WHAT IT IS ══════════════════════════════════════════════ -->
+    <section class="about section" id="about">
+      <div class="wrap">
+        <div class="about__grid">
+          <div class="about__head">
+            <p class="eyebrow">What you're walking into</p>
+            <h2 class="about__heading reveal-wipe" data-bind="about.heading">Stability not included.</h2>
+          </div>
+          <div class="about__body">
+            <div id="about-body" class="prose"></div>
+            <blockquote class="about__quote reveal" id="about-quote"></blockquote>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ HOW THE CHAOS WORKS ═════════════════════════════════════════════ -->
+    <section class="laws section" id="laws">
+      <div class="wrap">
+        <div class="section__head">
+          <p class="eyebrow">Unstable by design</p>
+          <h2 class="section__title reveal-wipe">How the chaos works</h2>
+          <p class="section__lede reveal">Six things that hold true on InsaneOnes. Everything else is up to whoever's online.</p>
+        </div>
+        <ol class="laws__list" id="laws-list"></ol>
+      </div>
+    </section>
+
+    <!-- ══ THE SHOP ════════════════════════════════════════════════════════ -->
+    <section class="shop section" id="shop">
+      <div class="wrap">
+        <div class="section__head">
+          <p class="eyebrow" data-bind="shop.kicker">Player economy</p>
+          <h2 class="section__title reveal-wipe" data-bind="shop.heading">Spend it, sell it, lose it.</h2>
+          <p class="section__lede reveal" data-bind="shop.body"></p>
+        </div>
+        <ul class="shop__grid" id="shop-grid"></ul>
+        <div class="shop__cta" id="shop-cta"></div>
+      </div>
+    </section>
+
+    <!-- ══ HOW TO JOIN ═════════════════════════════════════════════════════ -->
+    <section class="join section" id="join">
+      <div class="wrap">
+        <div class="section__head">
+          <p class="eyebrow">Four steps</p>
+          <h2 class="section__title reveal-wipe" data-bind="join.heading">How to drop in</h2>
+        </div>
+
+        <div class="join__layout">
+          <ol class="join__steps" id="join-steps"></ol>
+
+          <aside class="join__card reveal">
+            <p class="join__card-label">Server address</p>
+            <button class="join-box__ip join-box__ip--lg" data-copy="ip" type="button" aria-label="Copy server IP address">
+              <span class="join-box__addr" data-bind="ip">mc.insaneones.xyz</span>
+              <span class="join-box__copy">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+                <span class="join-box__copy-text">Copy</span>
+              </span>
+            </button>
+            <dl class="join__meta">
+              <div><dt>Edition</dt><dd data-bind="edition">Java Edition</dd></div>
+              <div><dt>Version</dt><dd class="mono"><span data-bind="version">26.1.2</span> · <span data-bind="versionNote">any version</span></dd></div>
+            </dl>
+            <p class="join__note" data-bind="join.note"></p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ GALLERY ═════════════════════════════════════════════════════════ -->
+    <section class="gallery section" id="gallery">
+      <div class="wrap">
+        <div class="section__head">
+          <p class="eyebrow" data-bind="gallery.note">Real screenshots.</p>
+          <h2 class="section__title reveal-wipe" data-bind="gallery.heading">Dispatches from the world</h2>
+        </div>
+        <ul class="gallery__grid" id="gallery-grid"></ul>
+      </div>
+    </section>
+
+    <!-- ══ FAQ ═════════════════════════════════════════════════════════════ -->
+    <section class="faq section" id="faq">
+      <div class="wrap">
+        <div class="section__head">
+          <p class="eyebrow">No illusions</p>
+          <h2 class="section__title reveal-wipe" data-bind="faq.heading">Before you log on</h2>
+        </div>
+        <div class="faq__list" id="faq-list"></div>
+      </div>
+    </section>
+
+    <!-- ══ DISCORD CTA ═════════════════════════════════════════════════════ -->
+    <section class="cta section" id="discord">
+      <div class="cta__glow" aria-hidden="true"></div>
+      <div class="wrap cta__inner">
+        <h2 class="cta__heading" data-bind="discordCta.heading">The war room is on Discord</h2>
+        <p class="cta__body" data-bind="discordCta.body"></p>
+        <a class="btn btn--blood btn--lg" data-href="discordUrl" href="#">
+          <svg class="btn__discord" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.3 4.4A19.8 19.8 0 0 0 15.4 3l-.25.5a18.3 18.3 0 0 1 4.35 1.35 16.6 16.6 0 0 0-15-1A16.6 16.6 0 0 0 8.85 4.9L8.6 3a19.8 19.8 0 0 0-4.9 1.4C1 9.6 0 14.7.45 19.7a20 20 0 0 0 6 3l.8-1.3a13 13 0 0 1-2.05-1c.17-.13.34-.26.5-.4a14.3 14.3 0 0 0 12.6 0c.16.14.33.27.5.4a13 13 0 0 1-2.06 1l.8 1.3a20 20 0 0 0 6-3c.6-5.9-1-11-3.6-15.3ZM8.3 16.2c-1.18 0-2.15-1.1-2.15-2.43 0-1.34.95-2.43 2.15-2.43s2.17 1.1 2.15 2.43c0 1.34-.95 2.43-2.15 2.43Zm7.4 0c-1.18 0-2.15-1.1-2.15-2.43 0-1.34.95-2.43 2.15-2.43s2.17 1.1 2.15 2.43c0 1.34-.94 2.43-2.15 2.43Z"/></svg>
+          <span data-bind="discordCta.button">Join the Discord</span>
+        </a>
+        <p class="cta__addr">or connect directly at <button class="linkish mono" data-copy="ip" data-bind="ip" type="button">mc.insaneones.xyz</button></p>
+      </div>
+    </section>
+  </main>
+
+  <!-- ══ FOOTER ════════════════════════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <div class="footer__brand">
+        <span class="brand__mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" fill="none"><rect x="3.5" y="3.5" width="25" height="25" rx="2" stroke="currentColor" stroke-width="2.4"/><path d="M17.5 5 L10.5 17 L15.5 17 L13 27 L22 14.5 L16.5 14.5 Z" fill="var(--blood)"/></svg>
+        </span>
+        <span class="brand__name" data-bind="name">InsaneOnes</span>
+        <button class="footer__ip mono" data-copy="ip" data-bind="ip" type="button" aria-label="Copy server IP">mc.insaneones.xyz</button>
+      </div>
+
+      <nav class="footer__links" id="footer-links" aria-label="Footer"></nav>
+      <ul class="footer__socials" id="footer-socials"></ul>
+    </div>
+    <div class="wrap footer__base">
+      <p class="footer__disclaimer" data-bind="footer.disclaimer"></p>
+      <p class="footer__copy">&copy; <span id="year"></span> <span data-bind="name">InsaneOnes</span></p>
+    </div>
+  </footer>
+
+  <!-- Toast for copy feedback -->
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <!-- Lightbox for gallery -->
+  <dialog class="lightbox" id="lightbox" aria-label="Screenshot viewer">
+    <button class="lightbox__close" id="lightboxClose" type="button" aria-label="Close">&times;</button>
+    <figure class="lightbox__fig">
+      <img id="lightboxImg" alt="" />
+      <figcaption id="lightboxCap"></figcaption>
+    </figure>
+  </dialog>
+
+  <script src="config.js"></script>
+  <script defer src="assets/lenis.min.js"></script>
+  <script defer src="main.js"></script>
+</body>
+</html>
