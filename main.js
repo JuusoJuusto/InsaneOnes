@@ -442,13 +442,12 @@
 
     var labelEl = $("#cdLabel"); if (labelEl && cfg.label) labelEl.textContent = cfg.label;
     var dateEl = $("#cdDate"); if (dateEl && cfg.dateText) dateEl.textContent = cfg.dateText;
-    var liveEl = $("#cdLive"); if (liveEl && cfg.liveText) liveEl.textContent = cfg.liveText;
     var days = $("#cdDays"), hours = $("#cdHours"), mins = $("#cdMins"), secs = $("#cdSecs");
     function pad(n) { return (n < 10 ? "0" : "") + n; }
     var timer;
     function tick() {
       var diff = target - Date.now();
-      if (diff <= 0) { section.classList.add("is-live"); if (timer) clearInterval(timer); return; }
+      if (diff <= 0) { if (timer) clearInterval(timer); section.remove(); return; }
       days.textContent = pad(Math.floor(diff / 86400000));
       hours.textContent = pad(Math.floor((diff % 86400000) / 3600000));
       mins.textContent = pad(Math.floor((diff % 3600000) / 60000));

@@ -44,7 +44,8 @@ window.SITE = {
   },
 
   /* ── LAUNCH COUNTDOWN (big countdown at the top until the server opens) ──── */
-  /* Set enabled:false (or delete this block) once it has launched.            */
+  /* It disappears automatically once the date below passes.                   */
+  /* Set enabled:false to hide it early.                                       */
 
   launch: {
     enabled: true,
@@ -53,7 +54,6 @@ window.SITE = {
     date:     "2026-06-12T23:59:00+03:00",
     label:    "Server opens in",             // small label above the numbers
     dateText: "Friday 12 June · 23:59",      // the human-readable opening time
-    liveText: "The gates are open. Get in.", // shown once the countdown hits zero
   },
 
   /* ── 3. LIVE STATUS (the \"look at the server\" card) ─────────────────────── */

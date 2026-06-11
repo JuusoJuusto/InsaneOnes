@@ -91,10 +91,6 @@
           <div class="countdown__unit"><span class="countdown__num" id="cdSecs">--</span><span class="countdown__lbl">Sec</span></div>
         </div>
         <p class="countdown__date" id="cdDate">Friday 12 June · 23:59</p>
-        <div class="countdown__live">
-          <p class="countdown__livetext" id="cdLive">The gates are open.</p>
-          <button class="btn btn--blood" data-copy="ip" type="button"><span>Copy IP &amp; Play</span></button>
-        </div>
       </div>
     </section>
 
@@ -335,5 +331,11 @@
   <script src="config.js"></script>
   <script defer src="assets/lenis.min.js"></script>
   <script defer src="main.js"></script>
+
+  <!-- Vercel Web Analytics — counts visitors and page views.
+       Enable it once in your Vercel project (Analytics tab → Enable).
+       It only runs on the deployed Vercel site, not on localhost. -->
+  <script>window.va=window.va||function(){(window.vaq=window.vaq||[]).push(arguments);};</script>
+  <script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>
