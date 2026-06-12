@@ -46,6 +46,7 @@
         <a href="#laws">The Laws</a>
         <a href="#shop">Shop</a>
         <a href="#gallery">Gallery</a>
+        <a href="#updates">Updates</a>
         <a href="#faq">FAQ</a>
       </nav>
 
@@ -56,7 +57,7 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
           </span>
         </button>
-        <a class="btn btn--ghost nav__discord" data-href="discordUrl" href="#">Discord<span class="soon-tag">soon</span></a>
+        <a class="btn btn--ghost nav__discord" data-href="discordUrl" href="#">Discord</a>
       </div>
 
       <button class="nav__toggle" id="navToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
@@ -69,6 +70,7 @@
       <a href="#laws">The Laws</a>
       <a href="#shop">Shop</a>
       <a href="#gallery">Gallery</a>
+      <a href="#updates">Updates</a>
       <a href="#faq">FAQ</a>
       <a class="btn btn--blood" data-href="discordUrl" href="#">Join the Discord</a>
     </nav>
@@ -270,6 +272,17 @@
       </div>
     </section>
 
+    <!-- ══ UPDATES / CHANGELOG ═════════════════════════════════════════════ -->
+    <section class="updates section" id="updates">
+      <div class="wrap">
+        <div class="section__head">
+          <p class="eyebrow" data-bind="updates.kicker">Patch notes</p>
+          <h2 class="section__title reveal-wipe" data-bind="updates.heading">Updates &amp; changelog</h2>
+        </div>
+        <ol class="updates__list" id="updates-list"></ol>
+      </div>
+    </section>
+
     <!-- ══ FAQ ═════════════════════════════════════════════════════════════ -->
     <section class="faq section" id="faq">
       <div class="wrap">
@@ -285,7 +298,6 @@
     <section class="cta section" id="discord">
       <div class="cta__glow" aria-hidden="true"></div>
       <div class="wrap cta__inner">
-        <span class="soon-badge">Coming soon</span>
         <h2 class="cta__heading" data-bind="discordCta.heading">The war room is on Discord</h2>
         <p class="cta__body" data-bind="discordCta.body"></p>
         <a class="btn btn--blood btn--lg" data-href="discordUrl" href="#">

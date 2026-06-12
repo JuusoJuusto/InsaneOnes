@@ -34,6 +34,9 @@ window.SITE = {
   liveStatus:  true,
   statusHost:  "mc.insaneones.xyz",
 
+  // When you deploy a new version, open tabs and returning visitors auto-refresh to it.
+  autoUpdate:  true,
+
   /* ── 2. HERO (the first thing visitors see) ─────────────────────────────── */
 
   hero: {
@@ -141,6 +144,19 @@ window.SITE = {
     ],
   },
 
+  /* ── UPDATES / CHANGELOG (newest first; add new entries at the top) ──────── */
+
+  updates: {
+    kicker:  "Patch notes",
+    heading: "Updates & changelog",
+    items: [
+      { date: "Jun 12", tag: "Launch",  title: "InsaneOnes opens tonight",   body: "The gates open at 23:59. Fresh world, no rules, no resets. Copy the IP and be ready." },
+      { date: "Jun 10", tag: "Economy", title: "Shop & player economy live", body: "Coins, the server shop, player stores, and the auction house are all in and ready for opening day." },
+      { date: "Jun 8",  tag: "Feature", title: "Proximity voice chat added", body: "Simple Voice Chat is installed. Grab the mod and you'll hear everyone creeping up on you." },
+      { date: "Jun 5",  tag: "Update",  title: "Cross-version support",       body: "The world runs on 26.1.2, but you can connect from almost any Minecraft version." },
+    ],
+  },
+
   /* ── 9. FAQ ─────────────────────────────────────────────────────────────── */
 
   faq: {
@@ -177,6 +193,7 @@ window.SITE = {
       { label: "Shop",        url: "#shop" },
       { label: "Join",        url: "#join" },
       { label: "Gallery",     url: "#gallery" },
+      { label: "Updates",     url: "#updates" },
       { label: "FAQ",         url: "#faq" },
     ],
     // Social links. Delete any you don't use; leave the array empty for none.

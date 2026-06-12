@@ -65,6 +65,7 @@
     renderShop();
     renderSteps();
     renderGallery();
+    renderUpdates();
     renderFaq();
     renderFooter();
 
@@ -143,6 +144,25 @@
         li.appendChild(scene);
       }
       grid.appendChild(li);
+    });
+  }
+
+  function renderUpdates() {
+    var list = $("#updates-list");
+    if (!list) return;
+    if (!SITE.updates || !SITE.updates.items || !SITE.updates.items.length) {
+      var sec = $("#updates"); if (sec) sec.remove(); return;
+    }
+    SITE.updates.items.forEach(function (u, i) {
+      var li = el("li", "update reveal"); li.style.setProperty("--i", i);
+      li.innerHTML =
+        '<div class="update__meta">' +
+          (u.date ? '<span class="update__date">' + esc(u.date) + "</span>" : "") +
+          (u.tag ? '<span class="update__tag">' + esc(u.tag) + "</span>" : "") +
+        "</div>" +
+        '<h3 class="update__title">' + esc(u.title) + "</h3>" +
+        '<p class="update__body">' + esc(u.body) + "</p>";
+      list.appendChild(li);
     });
   }
 
@@ -460,7 +480,6 @@
   /* ---- Discord "coming soon" popup (intercept Discord clicks until launch) - */
   function initDiscordSoon() {
     if (!SITE.discordComingSoon) return;
-    document.documentElement.classList.add("discord-soon");
     var dlg = $("#discordModal");
     function close() { if (!dlg) return; if (typeof dlg.close === "function") dlg.close(); else dlg.removeAttribute("open"); }
     function open() { if (!dlg) return; if (typeof dlg.showModal === "function") dlg.showModal(); else dlg.setAttribute("open", ""); }
@@ -478,6 +497,42 @@
       e.preventDefault();
       open();
     }, true);
+  }
+
+  /* ---- auto-update: refresh open tabs when a new version is deployed ------- */
+  function initAutoUpdate() {
+    if (SITE.autoUpdate === false) return;
+    var files = ["/", "/config.js", "/styles.css", "/main.js"];
+    var current = null, checking = false, pending = false;
+    function signature() {
+      return Promise.all(files.map(function (f) {
+        return fetch(f + (f.indexOf("?") < 0 ? "?" : "&") + "_=" + Date.now(), { method: "HEAD", cache: "no-store" })
+          .then(function (r) { return r.headers.get("etag") || r.headers.get("last-modified") || r.headers.get("content-length") || ""; })
+          .catch(function () { return "err"; });
+      })).then(function (p) { return p.join("|"); });
+    }
+    function maybeReload() {
+      if (!pending) return;
+      if (document.querySelector("dialog[open]")) return;      // don't interrupt a popup
+      if (document.hidden) { location.reload(); return; }       // refresh silently in the background
+      pending = false;
+      showToast("Refreshing for the latest version…");
+      setTimeout(function () { location.reload(); }, 1600);
+    }
+    function check() {
+      if (checking || navigator.onLine === false) return;
+      checking = true;
+      signature().then(function (sig) {
+        checking = false;
+        if (sig.indexOf("err") !== -1) return;                 // ignore transient network errors
+        if (current === null) { current = sig; return; }       // establish baseline
+        if (sig !== current) { current = sig; pending = true; }
+        maybeReload();
+      }).catch(function () { checking = false; });
+    }
+    check();
+    setInterval(check, 90000);
+    document.addEventListener("visibilitychange", function () { if (!document.hidden) check(); });
   }
 
   /* ---- boot --------------------------------------------------------------- */
@@ -499,6 +554,7 @@
     initMagnetic();
     initGlow();
     initAsh();
+    initAutoUpdate();
 
     // Hero entrance: trigger after first paint so the choreography plays cleanly.
     requestAnimationFrame(function () { requestAnimationFrame(function () { document.documentElement.classList.add("is-ready"); }); });
