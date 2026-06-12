@@ -62,6 +62,7 @@
     else if (quote) quote.remove();
 
     renderLaws();
+    renderRules();
     renderShop();
     renderSteps();
     renderGallery();
@@ -144,6 +145,17 @@
         li.appendChild(scene);
       }
       grid.appendChild(li);
+    });
+  }
+
+  function renderRules() {
+    var list = $("#rules-list");
+    if (!list) return;
+    if (!SITE.rules || !SITE.rules.items || !SITE.rules.items.length) { var s = $("#rules"); if (s) s.remove(); return; }
+    SITE.rules.items.forEach(function (r, i) {
+      var li = el("li", "rule reveal"); li.style.setProperty("--i", i);
+      li.innerHTML = '<span class="rule__x" aria-hidden="true">✕</span><span>' + esc(r) + "</span>";
+      list.appendChild(li);
     });
   }
 

@@ -94,6 +94,22 @@ window.SITE = {
     { title: "Not pay-to-win, not hardcore", body: "You respawn when you die, and you can't buy your way to the top. The grind is real and so are the losses." },
   ],
 
+  /* ── RULES (it's anarchy, but a short ban list keeps it playable) ───────── */
+
+  rules: {
+    kicker:  "Keep it fair",
+    heading: "The only rules",
+    intro:   "It's anarchy, so grief, raid, and betray all you want. The only things that get you banned are the ones that break the game itself:",
+    items: [
+      "No cheating",
+      "No DDoSing",
+      "No X-raying",
+      "No hacking",
+      "No unallowed client mods",
+    ],
+    allowed: "Allowed: quality-of-life mods like Distant Horizons and Simple Voice Chat. Anything that gives an unfair in-game advantage is not.",
+  },
+
   /* ── 6. THE SHOP ────────────────────────────────────────────────────────── */
   /* If you have a web store, put its link in `url` and a button appears.
      Leave `url` as "" to just describe the in-game shop. */
@@ -135,12 +151,12 @@ window.SITE = {
     heading: "Dispatches from the world",
     note: "Real screenshots. Add your own in the assets folder.",
     shots: [
-      { src: "", caption: "Spawn, after dark",        alt: "A dark Minecraft spawn area at night" },
+      { src: "assets/spawn_day_overview.jpg", caption: "Spawn, from above",     alt: "Overview of the InsaneOnes spawn by day" },
+      { src: "assets/spawn_day.jpg",          caption: "Spawn, by day",          alt: "The InsaneOnes spawn in daylight" },
+      { src: "assets/spawn_night.jpg",        caption: "Spawn, after dark",      alt: "The InsaneOnes spawn lit up at night" },
       { src: "", caption: "A base that didn't last",  alt: "The ruins of a griefed Minecraft base" },
-      { src: "", caption: "Market day at spawn",       alt: "Players trading at a Minecraft shop area" },
-      { src: "", caption: "Nether highway, 10k out",   alt: "A long nether tunnel highway far from spawn" },
-      { src: "", caption: "What's left of an alliance",alt: "A ruined shared base after a betrayal" },
-      { src: "", caption: "First night, last night",   alt: "A lone player at night in a hostile world" },
+      { src: "", caption: "Nether highway, 10k out",  alt: "A long nether tunnel highway far from spawn" },
+      { src: "", caption: "First night, last night",  alt: "A lone player at night in a hostile world" },
     ],
   },
 
@@ -187,6 +203,7 @@ window.SITE = {
     links: [
       { label: "Live status", url: "#status" },
       { label: "The Laws",    url: "#laws" },
+      { label: "Rules",       url: "#rules" },
       { label: "Shop",        url: "#shop" },
       { label: "Join",        url: "#join" },
       { label: "Gallery",     url: "#gallery" },
