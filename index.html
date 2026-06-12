@@ -241,7 +241,10 @@
           <h2 class="section__title reveal-wipe" data-bind="shop.heading">Spend it, sell it, lose it.</h2>
           <p class="section__lede reveal" data-bind="shop.body"></p>
         </div>
-        <ul class="shop__grid" id="shop-grid"></ul>
+        <div class="shop__wrap">
+          <ul class="shop__grid" id="shop-grid"></ul>
+          <div class="shop__soon" aria-hidden="true"><span>Coming soon</span></div>
+        </div>
         <div class="shop__cta" id="shop-cta"></div>
       </div>
     </section>
@@ -280,8 +283,9 @@
     <section class="gallery section" id="gallery">
       <div class="wrap">
         <div class="section__head">
-          <p class="eyebrow" data-bind="gallery.note">Real screenshots.</p>
+          <p class="eyebrow">From the server</p>
           <h2 class="section__title reveal-wipe" data-bind="gallery.heading">Dispatches from the world</h2>
+          <p class="section__lede reveal" data-bind="gallery.note"></p>
         </div>
         <ul class="gallery__grid" id="gallery-grid"></ul>
       </div>
@@ -350,9 +354,11 @@
   <!-- Lightbox for gallery -->
   <dialog class="lightbox" id="lightbox" aria-label="Screenshot viewer">
     <button class="lightbox__close" id="lightboxClose" type="button" aria-label="Close">&times;</button>
+    <button class="lightbox__nav lightbox__prev" id="lightboxPrev" type="button" aria-label="Previous image">&#8249;</button>
+    <button class="lightbox__nav lightbox__next" id="lightboxNext" type="button" aria-label="Next image">&#8250;</button>
     <figure class="lightbox__fig">
       <img id="lightboxImg" alt="" />
-      <figcaption id="lightboxCap"></figcaption>
+      <figcaption class="lightbox__cap"><span id="lightboxCap"></span><span class="lightbox__count" id="lightboxCount"></span></figcaption>
     </figure>
   </dialog>
 
@@ -361,8 +367,8 @@
     <div class="modal__card">
       <button class="modal__x" id="discordModalClose" type="button" aria-label="Close">&times;</button>
       <span class="modal__badge">Coming soon</span>
-      <h3 class="modal__title" id="discordModalTitle">The Discord opens with the server</h3>
-      <p class="modal__text">It's not live just yet. Copy the IP, get ready, and you'll be first in when the gates open.</p>
+      <h3 class="modal__title" id="discordModalTitle" data-bind="discordPopup.title">Discord is coming soon</h3>
+      <p class="modal__text" data-bind="discordPopup.body">It's not live just yet.</p>
       <div class="modal__actions">
         <button class="btn btn--blood" data-copy="ip" id="discordModalCopy" type="button"><span>Copy IP &amp; Play</span></button>
         <button class="btn btn--ghost" id="discordModalGotit" type="button">Got it</button>

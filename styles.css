@@ -664,3 +664,23 @@ a { color: inherit; text-decoration: none; }
 .rule:hover { border-color: var(--blood); transform: translateY(-2px); }
 .rule__x { width: 24px; height: 24px; flex: none; border-radius: 50%; background: oklch(0.56 0.205 22 / 0.15); border: 1px solid oklch(0.56 0.205 22 / 0.5); color: var(--blood-glow); display: grid; place-items: center; font-size: 0.72rem; }
 .rules__note { margin-top: 1.85rem; color: var(--muted); font-size: 0.95rem; max-width: 72ch; line-height: 1.55; }
+
+/* ── Shop "coming soon" stamp over the ledger ── */
+.shop__wrap { position: relative; }
+.shop__soon { display: none; }
+.shop.shop-soon .shop__grid { opacity: 0.22; filter: blur(3px) saturate(0.6); pointer-events: none; user-select: none; }
+.shop.shop-soon .shop__cta { display: none; }
+.shop.shop-soon .shop__soon { display: grid; place-items: center; position: absolute; inset: 0; z-index: 2; pointer-events: none; }
+.shop__soon span { font-family: var(--display); text-transform: uppercase; font-size: clamp(2.2rem, 8vw, 5rem); line-height: 0.9; letter-spacing: 0.01em; color: var(--ember); text-shadow: 0 0 50px oklch(0.70 0.15 55 / 0.45), 0 6px 24px oklch(0 0 0 / 0.6); border: 4px solid var(--ember); padding: 0.16em 0.5em; border-radius: var(--r); transform: rotate(-5deg); background: oklch(0.10 0.006 255 / 0.45); }
+
+/* ── Lightbox: proper centering + prev/next nav ── */
+.lightbox { position: fixed; inset: 0; margin: auto; width: fit-content; height: fit-content; max-width: 94vw; max-height: 94vh; overflow: visible; }
+.lightbox[open] { display: block; }
+.lightbox__fig img { max-width: min(94vw, 1500px); max-height: 82vh; width: auto; height: auto; display: block; margin-inline: auto; }
+.lightbox__cap { display: flex; align-items: center; justify-content: center; gap: 0.85rem; margin-top: 1rem; flex-wrap: wrap; }
+.lightbox__count { font-family: var(--mono); font-size: 0.85rem; color: var(--faint); }
+.lightbox__nav { position: absolute; top: 50%; transform: translateY(-50%); width: 52px; height: 52px; border-radius: 50%; background: oklch(0.13 0.006 255 / 0.72); border: 1px solid var(--line); color: var(--ink); font-size: 2rem; line-height: 1; display: grid; place-items: center; backdrop-filter: blur(6px); transition: border-color var(--t-fast) var(--ease), color var(--t-fast) var(--ease), background var(--t-fast) var(--ease); z-index: 3; }
+.lightbox__nav:hover { border-color: var(--blood); color: var(--blood-glow); background: oklch(0.17 0.008 255 / 0.92); }
+.lightbox__prev { left: -22px; }
+.lightbox__next { right: -22px; }
+@media (max-width: 720px) { .lightbox__prev { left: 8px; } .lightbox__next { right: 8px; } .lightbox__nav { width: 44px; height: 44px; font-size: 1.6rem; } }

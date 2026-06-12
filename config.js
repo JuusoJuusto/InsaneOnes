@@ -27,6 +27,10 @@ window.SITE = {
   discordUrl:  "https://discord.gg/jt53SpqaA7", // ← YOUR DISCORD INVITE LINK
   discordLabel:"discord.gg/jt53SpqaA7",          // What the link says on screen
   discordComingSoon: true,                       // Discord buttons show a "Coming soon" popup when clicked. Set false after launch.
+  discordPopup: {                                // the text inside that popup (edit freely)
+    title: "Discord is coming soon",
+    body:  "We're sorting out some unexpected errors with the Discord. It'll be back up soon, hop on the server in the meantime.",
+  },
 
   /* Live status is pinged from the free mcstatus.io API (with mcsrvstat.us as a
      backup). Set this to your server address (usually the same as `ip`).
@@ -105,7 +109,7 @@ window.SITE = {
       "No DDoSing",
       "No X-raying",
       "No hacking",
-      "No unallowed client mods",
+      "No unallowed client modifications",
     ],
     allowed: "Allowed: quality-of-life mods like Distant Horizons and Simple Voice Chat. Anything that gives an unfair in-game advantage is not.",
   },
@@ -116,6 +120,7 @@ window.SITE = {
 
   shop: {
     kicker:  "Player economy",
+    comingSoon: true,                         // show a big "COMING SOON" over the shop until it's live (set false to enable it)
     heading: "Spend it, sell it, lose it.",
     body:    "InsaneOnes runs on coins. Earn them, hoard them, or blow them all on something you'll lose in a raid an hour later. The economy is part of the game.",
     url:     "",                              // optional web store link, e.g. "https://store.insaneones.xyz"
@@ -149,7 +154,7 @@ window.SITE = {
 
   gallery: {
     heading: "Dispatches from the world",
-    note: "Real screenshots. Add your own in the assets folder.",
+    note: "Real screenshots. Send and share your gameplay in the InsaneOnes Discord gallery channel, you might get lucky and land one here.",
     shots: [
       { src: "assets/spawn_day_overview.jpg", caption: "Spawn, from above",     alt: "Overview of the InsaneOnes spawn by day" },
       { src: "assets/spawn_day.jpg",          caption: "Spawn, by day",          alt: "The InsaneOnes spawn in daylight" },
@@ -166,7 +171,9 @@ window.SITE = {
     kicker:  "Patch notes",
     heading: "Updates & changelog",
     items: [
-      { date: "Jun 12", tag: "Launch", title: "The gates open", body: "Tonight at 23:59 the world goes live. No rules, no claims, no one coming to save you. It's not hardcore, so dying just means respawning empty-handed while everyone scrambles for your loot. Spawn in, trust no one, and take it all." },
+      { date: "Jun 12 · 23:59", tag: "Live",    title: "The gates are open",   body: "InsaneOnes went live right on time at 23:59. The world is open, no rules, no one coming to save you. Copy the IP and drop in." },
+      { date: "Jun 13",         tag: "Shop",    title: "Shop isn't ready yet",  body: "Heads up: the shop and player economy hit some delays and aren't live just yet. We're still setting it up. Coming soon." },
+      { date: "Jun 13",         tag: "Discord", title: "Discord is acting up",  body: "The Discord is throwing some unexpected errors right now. We're on it and it'll be back soon. Coming soon." },
     ],
   },
 
