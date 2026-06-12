@@ -13,13 +13,7 @@
         { "key": "X-Content-Type-Options", "value": "nosniff" },
         { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
         { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
-        { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }
-      ]
-    },
-    {
-      "source": "/assets/(favicon.svg|lenis.min.js)",
-      "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=604800" }
+        { "key": "Cache-Control", "value": "no-store, no-cache, must-revalidate, max-age=0" }
       ]
     }
   ]

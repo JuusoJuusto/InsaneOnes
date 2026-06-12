@@ -150,7 +150,7 @@ window.SITE = {
     kicker:  "Patch notes",
     heading: "Updates & changelog",
     items: [
-      { date: "Jun 12", tag: "Launch", title: "The gates open", body: "Tonight at 23:59 the world goes live. No rules, no resets, no one coming to save you. Spawn in, trust no one, and take everything you can carry." },
+      { date: "Jun 12", tag: "Launch", title: "The gates open", body: "Tonight at 23:59 the world goes live. No rules, no claims, no one coming to save you. It's not hardcore, so dying just means respawning empty-handed while everyone scrambles for your loot. Spawn in, trust no one, and take it all." },
     ],
   },
 
