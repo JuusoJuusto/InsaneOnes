@@ -653,8 +653,7 @@ a { color: inherit; text-decoration: none; }
 .update__title { font-size: clamp(1.15rem, 2.2vw, 1.4rem); font-weight: 800; letter-spacing: -0.01em; margin-bottom: 0.35rem; }
 .update__body { color: var(--muted); max-width: 62ch; }
 
-/* ── Spawn photos: faint hero backdrop + about side image ── */
-.hero__photo { position: absolute; inset: 0; z-index: var(--z-scene); background: url("assets/spawn_day_overview.jpg") center top / cover no-repeat; opacity: 0.16; -webkit-mask-image: linear-gradient(180deg, #000 0%, #000 22%, transparent 66%); mask-image: linear-gradient(180deg, #000 0%, #000 22%, transparent 66%); pointer-events: none; }
+/* ── About side photo ── */
 .about__photo { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border-radius: var(--r-lg); border: 1px solid var(--line); margin-top: 2rem; box-shadow: var(--shadow); }
 
 /* ── Rules (it's anarchy, but a short ban list) ── */

@@ -575,6 +575,21 @@
     document.addEventListener("visibilitychange", function () { if (!document.hidden) check(); });
   }
 
+  /* ---- temporary site notice popup (auto-expires after SITE.notice.until) -- */
+  function initNotice() {
+    var dlg = $("#noticeModal"), cfg = SITE.notice;
+    if (!dlg) return;
+    if (!cfg || !cfg.until || Date.now() >= new Date(cfg.until).getTime()) { dlg.remove(); return; }
+    var seen = false; try { seen = !!sessionStorage.getItem("io_notice"); } catch (e) {}
+    if (seen) return;
+    function close() { try { sessionStorage.setItem("io_notice", "1"); } catch (e) {} if (typeof dlg.close === "function") dlg.close(); else dlg.removeAttribute("open"); }
+    var x = $("#noticeClose"), ok = $("#noticeGotit");
+    if (x) x.addEventListener("click", close);
+    if (ok) ok.addEventListener("click", close);
+    dlg.addEventListener("click", function (e) { if (e.target === dlg) close(); });
+    setTimeout(function () { if (typeof dlg.showModal === "function") dlg.showModal(); else dlg.setAttribute("open", ""); }, 900);
+  }
+
   /* ---- boot --------------------------------------------------------------- */
   function boot() {
     if ("scrollRestoration" in history) history.scrollRestoration = "manual";
@@ -595,6 +610,7 @@
     initGlow();
     initAsh();
     initAutoUpdate();
+    initNotice();
 
     // Hero entrance: trigger after first paint so the choreography plays cleanly.
     requestAnimationFrame(function () { requestAnimationFrame(function () { document.documentElement.classList.add("is-ready"); }); });

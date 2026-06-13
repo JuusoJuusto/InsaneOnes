@@ -32,6 +32,13 @@ window.SITE = {
     body:  "We're sorting out some unexpected errors with the Discord. It'll be back up soon, hop on the server in the meantime.",
   },
 
+  // Temporary popup notice. Shows on load and stops automatically after `until`.
+  notice: {
+    until: "2026-06-14T23:59:00+03:00",          // hides itself after this time
+    title: "We're having some issues",
+    body:  "The server is currently experiencing errors and we're actively fixing them. The Discord is also having some troubles right now. Thanks for your patience, things will be back to normal soon.",
+  },
+
   /* Live status is pinged from the free mcstatus.io API (with mcsrvstat.us as a
      backup). Set this to your server address (usually the same as `ip`).
      Set `liveStatus` to false to hide all the live status bits. */
@@ -46,7 +53,7 @@ window.SITE = {
   hero: {
     kicker:  "Survival Anarchy SMP",          // small label above the title
     // Lead line under the IP. Keep it short.
-    intro:   "A survival anarchy SMP where the world never resets, the economy is yours to run, and you can join from any version. Build something. Watch someone take it.",
+    intro:   "A survival anarchy SMP where the economy is yours to run and you can join from any version. Build something. Watch someone take it.",
     primaryCta: "Copy IP & Play",
     ghostCta:   "Join the Discord",
   },
@@ -79,7 +86,7 @@ window.SITE = {
     // Each string is its own paragraph. Add or remove lines freely.
     body: [
       "InsaneOnes is a survival anarchy SMP. No rules, no claims, and no staff standing between you and the next player who wants what you have. You make it on your own terms, or you don't make it.",
-      "The world never resets, so everything you do leaves a mark. There's a real player economy with a shop and a market, and no map wipe is coming to bail you out of a bad trade or a worse alliance.",
+      "Everything you do here leaves a mark. There's a real player economy with a shop and a market, and no one is coming to bail you out of a bad trade or a worse alliance.",
       "It is not hardcore, you respawn when you die. You just respawn with nothing, while everything you were carrying becomes someone else's to spend.",
     ],
     pullQuote: "Build something. Watch someone take it.",
@@ -90,7 +97,7 @@ window.SITE = {
 
   laws: [
     { title: "There are no rules",      body: "Grief, raid, betray, build empires, burn them down. Nothing here is against the rules, because there are none." },
-    { title: "The world never resets",  body: "One permanent world, no wipes, no rollbacks. Every base you raid and every scar you leave stays forever." },
+    { title: "Trust is a liability",    body: "Every ally is a future enemy. Build with people if you want, just don't be shocked when they turn on you." },
     { title: "No admin will save you",  body: "Staff don't police the world, return your items, or undo your death. You are completely on your own." },
     { title: "A real player economy",   body: "Earn coins, buy and sell at the shop, run your own store, or get rich off everyone else's mistakes." },
     { title: "Proximity voice chat",    body: "Simple Voice Chat is built in. Hear footsteps behind you, cut deals, and catch last words in real-time proximity voice. Grab the mod and talk." },
@@ -172,6 +179,7 @@ window.SITE = {
     heading: "Updates & changelog",
     items: [
       { date: "Jun 12 · 23:59", tag: "Live",    title: "The gates are open",   body: "InsaneOnes went live right on time at 23:59. The world is open, no rules, no one coming to save you. Copy the IP and drop in." },
+      { date: "Jun 13",         tag: "Mods",    title: "Distant Horizons + Voice Chat loaded", body: "Distant Horizons and Simple Voice Chat are loaded on the server. Install them client-side and they just work, crank your render distance and hear everyone around you." },
       { date: "Jun 13",         tag: "Shop",    title: "Shop isn't ready yet",  body: "Heads up: the shop and player economy hit some delays and aren't live just yet. We're still setting it up. Coming soon." },
       { date: "Jun 13",         tag: "Discord", title: "Discord is acting up",  body: "The Discord is throwing some unexpected errors right now. We're on it and it'll be back soon. Coming soon." },
     ],
@@ -189,7 +197,6 @@ window.SITE = {
       { q: "What version can I join on?",    a: "The world runs on 26.1.2, but you can connect from almost any Minecraft version. Use whatever you've got installed." },
       { q: "Do I need a premium account?",   a: "Yes. InsaneOnes is Java Edition and requires an official, paid Minecraft account. Cracked clients can't join." },
       { q: "Is it pay-to-win?",              a: "No. The shop runs on in-game coins you earn by playing. You can't buy power with real money." },
-      { q: "Do you reset the map?",          a: "No. The world is permanent. What happens in it stays in it." },
     ],
   },
 
