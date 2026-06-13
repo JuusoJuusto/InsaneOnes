@@ -63,6 +63,7 @@
 
     renderLaws();
     renderRules();
+    renderMods();
     renderShop();
     renderSteps();
     renderGallery();
@@ -160,6 +161,18 @@
     SITE.rules.items.forEach(function (r, i) {
       var li = el("li", "rule reveal"); li.style.setProperty("--i", i);
       li.innerHTML = '<span class="rule__x" aria-hidden="true">✕</span><span>' + esc(r) + "</span>";
+      list.appendChild(li);
+    });
+  }
+
+  function renderMods() {
+    var list = $("#mods-grid");
+    if (!list) return;
+    if (!SITE.mods || !SITE.mods.items || !SITE.mods.items.length) { var s = $("#mods"); if (s) s.remove(); return; }
+    SITE.mods.items.forEach(function (m, i) {
+      var li = el("li", "mod reveal"); li.style.setProperty("--i", i);
+      li.innerHTML = '<div class="mod__head"><h3 class="mod__name">' + esc(m.name) + '</h3><span class="mod__tag">Loaded</span></div>' +
+        '<p class="mod__body">' + esc(m.body) + "</p>";
       list.appendChild(li);
     });
   }

@@ -121,6 +121,18 @@ window.SITE = {
     allowed: "Allowed: quality-of-life mods like Distant Horizons and Simple Voice Chat. Anything that gives an unfair in-game advantage is not.",
   },
 
+  /* ── LOADED MODS (server-side mods players can use) ─────────────────────── */
+
+  mods: {
+    kicker:  "Loaded & ready",
+    heading: "Mods that just work",
+    body:    "These are loaded on the server already. Install them on your client and they're good to go, no setup needed.",
+    items: [
+      { name: "Distant Horizons", body: "Push your render distance way past vanilla and watch the whole world stretch out from spawn, without melting your frames." },
+      { name: "Simple Voice Chat", body: "Proximity voice, built in. Hear footsteps behind you, cut deals, and catch last words in real time." },
+    ],
+  },
+
   /* ── 6. THE SHOP ────────────────────────────────────────────────────────── */
   /* If you have a web store, put its link in `url` and a button appears.
      Leave `url` as "" to just describe the in-game shop. */
@@ -218,6 +230,7 @@ window.SITE = {
       { label: "Live status", url: "#status" },
       { label: "The Laws",    url: "#laws" },
       { label: "Rules",       url: "#rules" },
+      { label: "Mods",        url: "#mods" },
       { label: "Shop",        url: "#shop" },
       { label: "Join",        url: "#join" },
       { label: "Gallery",     url: "#gallery" },
